@@ -18,14 +18,14 @@ export default function Navbar() {
           <Image
             src="/danish.png"
             alt="Engr. Danish Logo"
-            width={120}
+            width={150}
             height={50}
             className="drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
           />
         </div>
 
         {/* Desktop Center Nav */}
-        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bg-white/5 backdrop-blur-xl rounded-full px-8 py-2 shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
+        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bg-white/2 backdrop-blur-xl rounded-full px-8 py-2 shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
           <ul className="flex gap-4 md:gap-12 text-gray-300 text-sm md:text-base font-semibold">
             {navItems.map((item) => (
               <li key={item}>
@@ -42,7 +42,7 @@ export default function Navbar() {
 
         {/* Right: Mobile Menu Button */}
         <div className="lg:hidden">
-          <button type="submit" onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
+          <button type="submit" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle navigation menu" title="Toggle navigation menu" className="text-white focus:outline-none">
             <div className="space-y-1">
               <span className="block w-6 h-0.5 bg-white"></span>
               <span className="block w-6 h-0.5 bg-white"></span>
