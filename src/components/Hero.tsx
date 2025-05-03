@@ -5,7 +5,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine, ISourceOptions } from "tsparticles-engine";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
 
 const HeroSection = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -18,8 +18,8 @@ const HeroSection = () => {
     interactivity: { events: { onClick: { enable: false }, onHover: { enable: false } } },
     particles: {
       color: { value: "#ffffff" },
-      move: { direction: "none", enable: true, speed: 0.5 },
-      number: { density: { enable: true, area: 800 }, value: 100 },
+      move: { direction: "none", enable: true, speed: 0.8 },
+      number: { density: { enable: true, area: 800 }, value: 150 },
       opacity: { value: { min: 0.2, max: 0.6 } },
       shape: { type: "circle" },
       size: { value: { min: 1, max: 2 } },
@@ -81,8 +81,8 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div className="flex flex-col items-center gap-6" variants={itemVariants}>
-          {/* Social Icons */}
-          <div className="flex gap-6">
+          {/* Social Icons + Download Button */}
+          <div className="flex gap-6 items-center flex-wrap justify-center">
             <motion.a
               href="https://github.com/DanishHaji"
               target="_blank"
@@ -110,16 +110,28 @@ const HeroSection = () => {
             >
               <FiMail />
             </motion.a>
+
+            {/* ✅ Download CV Button */}
+            <motion.a
+              href="https://drive.google.com/file/d/1ChTOWzDQ0uyZQpZc_KC6H3cSzfnU8kTE/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-base font-semibold transition-all shadow-md"
+            >
+              <FiDownload className="text-xl" />
+              Download CV
+            </motion.a>
           </div>
         </motion.div>
       </motion.div>
 
-      {/* Magical Glow Curve */}
+      {/* Enhanced Glow Curve */}
       <div className="absolute bottom-0 left-0 w-full h-60 overflow-hidden z-10">
         <svg viewBox="0 0 1440 200" className="w-full h-full" preserveAspectRatio="none">
           <defs>
             <filter id="magicalGlow" x="-100%" y="-100%" width="300%" height="300%">
-              <feGaussianBlur stdDeviation="30" result="glow" />
+              <feGaussianBlur stdDeviation="50" result="glow" />
               <feMerge>
                 <feMergeNode in="glow" />
                 <feMergeNode in="glow" />
@@ -129,7 +141,7 @@ const HeroSection = () => {
 
             <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
               <stop offset="0%" stopColor="#9333ea" stopOpacity="0" />
-              <stop offset="50%" stopColor="#c084fc" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#c084fc" stopOpacity="0.9" />
               <stop offset="100%" stopColor="#9333ea" stopOpacity="0" />
             </linearGradient>
           </defs>
@@ -137,7 +149,7 @@ const HeroSection = () => {
           <path
             d="M0,180 Q720,30 1440,180"
             stroke="url(#flameGradient)"
-            strokeWidth="5"
+            strokeWidth="6"
             fill="none"
             filter="url(#magicalGlow)"
             className="animate-glowPulse"
@@ -147,11 +159,22 @@ const HeroSection = () => {
 
       <style jsx>{`
         @keyframes glowPulse {
-          0% { stroke-opacity: 0.8; filter: drop-shadow(0 0 20px #9333ea); }
-          50% { stroke-opacity: 1; filter: drop-shadow(0 0 60px #c084fc); }
-          100% { stroke-opacity: 0.9; filter: drop-shadow(0 0 40px #9333ea); }
+          0% {
+            stroke-opacity: 0.9;
+            filter: drop-shadow(0 0 40px #9333ea);
+          }
+          50% {
+            stroke-opacity: 1;
+            filter: drop-shadow(0 0 100px #c084fc);
+          }
+          100% {
+            stroke-opacity: 0.95;
+            filter: drop-shadow(0 0 80px #9333ea);
+          }
         }
-        .animate-glowPulse { animation: glowPulse 3s infinite ease-in-out; }
+        .animate-glowPulse {
+          animation: glowPulse 3s infinite ease-in-out;
+        }
       `}</style>
     </section>
   );
