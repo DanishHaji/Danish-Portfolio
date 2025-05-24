@@ -75,7 +75,7 @@ const CollaborationCard = () => {
   };
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center p-4 bg-gray-900">
+    <div className="min-h-[80vh] flex flex-col rounded-md items-center justify-center p-4 bg-gradient-to-br from-[#1f1b2e] via-black to-[#100c1a]">
       {/* Rotating Container */}
       <motion.div
         className="relative"
