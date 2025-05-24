@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import CardGrid from "@/components/CardGrid";
+import ProjectShowcase from "@/components/ProjectShowcase";
 
 export default function Home() {
     return (
@@ -8,6 +9,7 @@ export default function Home() {
             <Navbar />
             <Hero />
             <CardGrid />
+            <ProjectShowcase />
         </div>
     );
 }
