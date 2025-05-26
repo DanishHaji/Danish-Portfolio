@@ -163,7 +163,33 @@ const techColors: { [key: string]: string } = {
 
 const ProjectShowcase = () => {
   return (
-    <div className="space-y-20 p-6">
+    <div className="space-y-20 p-6 pt-16">
+      {/* Section Heading */}
+        <div id="projects" className="text-center mb-10 space-y-4">
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-white text-sm font-bold uppercase tracking-widest"
+          >
+            FEATURED CASE STUDIES
+          </motion.h3>
+
+         <motion.h2
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-4xl md:text-6xl font-bold flex justify-center items-center gap-2 text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+        >
+          <span>Curated</span>
+          <span
+            className="italic font-serif font-bold text-4xl md:text-7xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_200%] animate-gradient bg-clip-text text-transparent"
+          >
+            work
+          </span>
+        </motion.h2>
+        </div>
+
       {projects.map((project, index) => {
         const isEven = index % 2 === 0;
 
