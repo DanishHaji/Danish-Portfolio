@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import CardGrid from "@/components/CardGrid";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import PythonProjectsSection from "@/components/PythonProjectsSection";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Hero />
             <CardGrid />
             <ProjectShowcase />
+            <PythonProjectsSection />
         </div>
     );
 }
