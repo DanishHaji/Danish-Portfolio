@@ -5,6 +5,7 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 import PythonProjectsSection from "@/components/PythonProjectsSection";
 import TechStackGrid from "@/components/TechStackGrid";
 import CrossBanners from "@/components/CrossBanners";
+import ServicesSection from "@/components/ServicesSection";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <PythonProjectsSection />
             <TechStackGrid />
             <CrossBanners />
+            <ServicesSection />
         </div>
     );
 }
