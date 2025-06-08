@@ -3,10 +3,16 @@
 import React from 'react';
 
 const words = [
-  "INNOVATIVE", "ENGAGING", "ACCESSIBLE", "RESPONSIVE", "DYNAMIC",
-  "SCALABLE", "OPTIMIZED", "INTUITIVE", "EFFICIENT", "MODERN",
-  "SECURE", "ADAPTABLE", "USER-FRIENDLY", "POWERFUL", "RELIABLE",
-  "FLEXIBLE", "PERFORMANT", "ROBUST", "ELEGANT", "INTERACTIVE",
+   "🚀 INNOVATIVE", "✨ ENGAGING", "♿ ACCESSIBLE", "📱 RESPONSIVE", "⚡ DYNAMIC",
+  "📈 SCALABLE", "🛠️ OPTIMIZED", "🧠 INTUITIVE", "⚙️ EFFICIENT", "🎨 MODERN",
+  "🔒 SECURE", "🔄 ADAPTABLE", "👥 USER-FRIENDLY", "💪 POWERFUL", "🔧 RELIABLE",
+  "🔁 FLEXIBLE", "🏎️ PERFORMANT", "🛡️ ROBUST", "💎 ELEGANT", "🖱️ INTERACTIVE",
+  "🎯 CREATIVE", "⚡ FAST", "🧼 CLEAN", "🧩 SIMPLE", "🎩 SOPHISTICATED",
+  "🌀 VERSATILE", "💡 LIGHTWEIGHT", "🔗 SEAMLESS", "🛠️ CUSTOMIZABLE", "🌟 UNIQUE",
+  "🧠 INTELLIGENT", "🌐 CONNECTED", "🎞️ ANIMATED", "🎯 INTENTIONAL", "🔬 ENHANCED",
+  "🔌 INTEGRATED", "💻 CROSS-PLATFORM", "🔥 BOLD", "🌍 INCLUSIVE", "🧱 STRUCTURED",
+  "🎨 AESTHETIC", "🧠 SMART", "♿ ACCESSIBLE", "☁️ CLOUD-READY", "🚢 DEPLOYABLE",
+  "🧹 MAINTAINABLE", "🔮 FUTURE-PROOF", "🧑‍💻 CODED", "⏫ ELEVATED", "📈 TRENDING", "🛠️ CRAFTED",
 ];
 
 interface BannerMarqueeProps {
@@ -21,7 +27,7 @@ const BannerMarquee: React.FC<BannerMarqueeProps> = ({ className, reverse = fals
         .marquee-track {
           display: flex;
           width: fit-content;
-          animation: ${reverse ? 'marquee-reverse' : 'marquee'} 30s linear infinite;
+          animation: ${reverse ? 'marquee-reverse' : 'marquee'} 120s linear infinite;
         }
 
         @keyframes marquee {
@@ -58,7 +64,7 @@ const CrossBanners: React.FC = () => {
 
       {/* Back tilted banner (no text) */}
       <div className="absolute">
-        <BannerMarquee reverse className="transform -rotate-6 opacity-70" />
+        <BannerMarquee reverse className="transform -rotate-6 opacity-90" />
       </div>
     </div>
   );
