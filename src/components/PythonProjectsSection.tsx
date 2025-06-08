@@ -35,7 +35,7 @@ const apps = [
 
 const PythonProjectsSection = () => {
   return (
-    <section className="py-16 px-6 bg-black">
+    <section id="apps" className="py-16 px-6 bg-black">
       {/* Subheading */}
       <motion.h3
         initial={{ opacity: 0, y: -20 }}
@@ -51,10 +51,10 @@ const PythonProjectsSection = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-center text-4xl md:text-6xl font-bold flex justify-center items-center gap-4 text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]"
+        className="text-center text-3xl sm:text-4xl md:text-6xl font-bold flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]"
       >
         <span>Python-Powered</span>
-        <span className="italic font-serif font-bold text-4xl md:text-7xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_200%] animate-gradient bg-clip-text text-transparent">
+        <span className="italic font-serif font-bold text-4xl sm:text-4xl md:text-6xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_200%] animate-gradient bg-clip-text text-transparent">
           Solutions
         </span>
       </motion.h2>
