@@ -3,7 +3,7 @@
 import React from 'react';
 
 const words = [
-   "🚀 INNOVATIVE", "✨ ENGAGING", "♿ ACCESSIBLE", "📱 RESPONSIVE", "⚡ DYNAMIC",
+  "🚀 INNOVATIVE", "✨ ENGAGING", "♿ ACCESSIBLE", "📱 RESPONSIVE", "⚡ DYNAMIC",
   "📈 SCALABLE", "🛠️ OPTIMIZED", "🧠 INTUITIVE", "⚙️ EFFICIENT", "🎨 MODERN",
   "🔒 SECURE", "🔄 ADAPTABLE", "👥 USER-FRIENDLY", "💪 POWERFUL", "🔧 RELIABLE",
   "🔁 FLEXIBLE", "🏎️ PERFORMANT", "🛡️ ROBUST", "💎 ELEGANT", "🖱️ INTERACTIVE",
@@ -22,7 +22,7 @@ interface BannerMarqueeProps {
 
 const BannerMarquee: React.FC<BannerMarqueeProps> = ({ className, reverse = false }) => {
   return (
-    <div className={`w-full overflow-hidden bg-gray-900 text-white py-6 ${className}`}>
+    <div className={`w-full overflow-hidden bg-gray-900 text-white py-2 sm:py-4 md:py-6 ${className}`}>
       <style jsx>{`
         .marquee-track {
           display: flex;
@@ -44,7 +44,10 @@ const BannerMarquee: React.FC<BannerMarqueeProps> = ({ className, reverse = fals
       <div className="flex w-[200%]">
         <div className="marquee-track">
           {[...words, ...words].map((word, index) => (
-            <span key={index} className="text-lg font-bold tracking-wide mx-4 whitespace-nowrap text-cyan-300 drop-shadow-[0_0_8px_rgba(0,255,255,0.9)]">
+            <span
+              key={index}
+              className="text-xs sm:text-sm md:text-lg font-bold tracking-wide mx-1 sm:mx-2 md:mx-4 whitespace-nowrap text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.8)]"
+            >
               {word} ✦
             </span>
           ))}
@@ -56,13 +59,23 @@ const BannerMarquee: React.FC<BannerMarqueeProps> = ({ className, reverse = fals
 
 const CrossBanners: React.FC = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center">
+    <div
+      className="
+        relative w-full
+        min-h-[120px]      /* small screens minimum height */
+        sm:min-h-[180px]   /* small-medium */
+        md:min-h-[300px]   /* medium and above */
+        max-h-[300px]      /* maximum height */
+        flex items-center justify-center
+        overflow-hidden     /* prevent overflow */
+        "
+    >
       {/* Front tilted banner */}
       <div className="absolute">
         <BannerMarquee className="transform rotate-6 opacity-50" />
       </div>
 
-      {/* Back tilted banner (no text) */}
+      {/* Back tilted banner */}
       <div className="absolute">
         <BannerMarquee reverse className="transform -rotate-6 opacity-90" />
       </div>
