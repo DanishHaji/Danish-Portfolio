@@ -227,7 +227,7 @@ const TechStackGrid = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-black py-16 px-4 sm:px-6 relative overflow-hidden">
+    <div id="skills" className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-black py-16 px-4 sm:px-6 relative overflow-hidden">
       {/* Canvas container */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <canvas ref={canvasRef} className="w-full h-full" />
