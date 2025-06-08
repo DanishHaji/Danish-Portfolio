@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const navItems = ["home", "about", "projects", "apps", "skills", "contact"];
+const navItems = ["home", "about", "projects", "apps", "skills", "Services", "contact"];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
