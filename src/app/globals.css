@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+body {
+  overflow-x: hidden;
+}
+
 @layer utilities {
   .animate-gradient {
     animation: gradientShift 6s ease infinite;
