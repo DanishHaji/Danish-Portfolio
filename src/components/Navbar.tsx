@@ -20,12 +20,12 @@ export default function Navbar() {
             alt="Engr. Danish Logo"
             width={150}
             height={50}
-            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+            className="w-[120px] h-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
           />
         </div>
 
         {/* Desktop Center Nav */}
-        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bg-white/2 backdrop-blur-xl rounded-full px-8 py-2 shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
+        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bg-white/2 backdrop-blur-xl rounded-full max-w-[90vw] overflow-x-auto px-8 py-2 shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
           <ul className="flex gap-4 md:gap-12 text-gray-300 text-sm md:text-base font-semibold">
             {navItems.map((item) => (
               <li key={item}>
