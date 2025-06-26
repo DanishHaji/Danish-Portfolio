@@ -45,7 +45,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black flex flex-col justify-center items-center text-white px-4 pb-10">
+    <section className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col justify-center items-center text-white px-4 pb-10">
       {/* Background Particles */}
       <div className="absolute inset-0 z-0">
         <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
@@ -58,7 +58,7 @@ const HeroSection = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 className="text-5xl sm:text-6xl md:text-6xl font-bold mb-6 leading-tight" variants={itemVariants}>
+        <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight" variants={itemVariants}>
           I help founders turn ideas into seamless{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300 font-serif italic">
             Digital Experiences
