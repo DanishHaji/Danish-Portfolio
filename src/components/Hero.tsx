@@ -45,7 +45,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col justify-center items-center text-white px-4 pb-10">
+    <section className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col justify-center items-center text-white px-2 sm:px-4 pb-10">
       {/* Background Particles */}
       <div className="absolute inset-0 z-0">
         <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
@@ -58,7 +58,7 @@ const HeroSection = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight" variants={itemVariants}>
+        <motion.h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight" variants={itemVariants}>
           I help founders turn ideas into seamless{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300 font-serif italic">
             Digital Experiences
@@ -66,14 +66,14 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.div className="text-xl sm:text-2xl md:text-2xl mb-8" variants={itemVariants}>
-          <p className="inline-flex text-4xl items-center gap-2">
+          <p className="inline-flex text-2xl sm:text-3xl md:text-4xl items-center gap-2">
             Hi, I'm{" "}
             <span className="font-semibold text-purple-300 inline-flex items-center gap-2">
               Engr. Danish
               <img
                 src="/dani.png"
                 alt="Danish"
-                className="w-16 h-16 rounded-full border-2 border-purple-400 shadow-lg"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-purple-400 shadow-lg"
               />
             </span>
             , a Full Stack Developer
@@ -82,13 +82,13 @@ const HeroSection = () => {
 
         <motion.div className="flex flex-col items-center gap-6" variants={itemVariants}>
           {/* Social Icons + Download Button */}
-          <div className="flex gap-6 items-center flex-wrap justify-center">
+          <div className="flex gap-4 sm:gap-6 items-center flex-wrap justify-center">
             <motion.a
               href="https://github.com/DanishHaji"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3, color: "#9333ea" }}
-              className="text-3xl sm:text-4xl text-white hover:text-purple-400 transition-colors"
+              className="text-2xl sm:text-3xl md:text-4xl text-white hover:text-purple-400 transition-colors"
             >
               <FiGithub />
             </motion.a>
@@ -98,7 +98,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3, color: "#0a66c2" }}
-              className="text-3xl sm:text-4xl text-white hover:text-blue-500 transition-colors"
+              className="text-2xl sm:text-3xl md:text-4xl text-white hover:text-blue-500 transition-colors"
             >
               <FiLinkedin />
             </motion.a>
@@ -106,12 +106,12 @@ const HeroSection = () => {
             <motion.a
               href="mailto:danish.haji111@gmail.com"
               whileHover={{ y: -3, color: "#ea4335" }}
-              className="text-3xl sm:text-4xl text-white hover:text-red-500 transition-colors"
+              className="text-2  xl sm:text-3xl md:text-4xl text-white hover:text-red-500 transition-colors"
             >
               <FiMail />
             </motion.a>
 
-            {/* ✅ Download CV Button */}
+            {/* Download CV Button */}
             <motion.a
               href="https://drive.google.com/file/d/1ChTOWzDQ0uyZQpZc_KC6H3cSzfnU8kTE/view?usp=sharing"
               target="_blank"
