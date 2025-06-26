@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative w-full h-screen overflow-hidden font-sans"
+      className="relative w-full min-h-screen overflow-hidden font-sans"
     >
       {/* Video Background */}
       <video
@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-30 mix-blend-lighten"
       >
         <source src="/blackhole2.webm" type="video/webm" />
         Your browser does not support the video tag.
@@ -92,7 +92,7 @@ const AboutMe: React.FC = () => {
             alt="Profile"
             width={400}
             height={400}
-            className="rounded-full border-4 border-white shadow-lg object-cover"
+            className="rounded-full border-4 border-white object-cover"
           />
         </div>
       </div>
